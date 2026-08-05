@@ -1,0 +1,258 @@
+/* ==========================================================================
+           1. CONFIGURAÇÕES GERAIS E ACESSIBILIDADE
+           ========================================================================== */
+        :root {
+            --cor-cabecalho: #1e3a8a; /* Azul escuro elegante e de alto contraste */
+            --cor-fundo: #f8fafc;
+            --cor-texto: #0f172a;
+            --cor-card: #ffffff;
+            --cor-borda: #cbd5e1;
+            --cor-ajuda: #dc2626; /* Vermelho destacado */
+            --cor-ajuda-hover: #b91c1c;
+            --cor-destaque: #2563eb;
+            --tamanho-fonte-base: 18px; /* Fonte maior para facilitar leitura */
+        }
+
+        html {
+            scroll-behavior: smooth; /* Rolagem suave ao clicar no botão */
+            font-size: var(--tamanho-fonte-base);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            line-height: 1.6;
+        }
+
+        /* Botões de acessibilidade de fonte */
+        .barra-acessibilidade {
+            background-color: #0f172a;
+            color: #ffffff;
+            padding: 8px 20px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 15px;
+            font-size: 0.9rem;
+        }
+
+        .btn-fonte {
+            background-color: #334155;
+            color: white;
+            border: 2px solid white;
+            padding: 4px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .btn-fonte:hover, .btn-fonte:focus {
+            background-color: var(--cor-destaque);
+            outline: 3px solid #fde047;
+        }
+
+        /* ==========================================================================
+           2. HEADER (CABEÇALHO)
+           ========================================================================== */
+        header {
+            background-color: var(--cor-cabecalho);
+            color: #ffffff;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .header-conteudo {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            letter-spacing: 0.5px;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+
+        /* Botão Vermelho de Ajuda */
+        .btn-ajuda {
+            display: inline-block;
+            background-color: var(--cor-ajuda);
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: bold;
+            padding: 16px 32px;
+            border-radius: 50px;
+            border: 3px solid #ffffff;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .btn-ajuda:hover, .btn-ajuda:focus {
+            background-color: var(--cor-ajuda-hover);
+            transform: scale(1.05);
+            outline: 4px solid #fde047;
+        }
+
+        /* ==========================================================================
+           3. CONTEÚDO PRINCIPAL (DICAS E NAVEGAÇÃO)
+           ========================================================================== */
+        main {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .introducao {
+            background-color: #e0f2fe;
+            border-left: 8px solid var(--cor-destaque);
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+        }
+
+        .introducao h2 {
+            margin-top: 0;
+            color: var(--cor-cabecalho);
+            font-size: 1.6rem;
+        }
+
+        .secao-titulo {
+            text-align: center;
+            color: var(--cor-cabecalho);
+            font-size: 2rem;
+            margin-bottom: 30px;
+            border-bottom: 4px solid var(--cor-cabecalho);
+            padding-bottom: 10px;
+        }
+
+        /* Grid de Dicas */
+        .grid-dicas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .card-dica {
+            background-color: var(--cor-card);
+            border: 2px solid var(--cor-borda);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card-dica:focus-within, .card-dica:hover {
+            border-color: var(--cor-destaque);
+            box-shadow: 0 8px 15px rgba(37, 99, 235, 0.15);
+        }
+
+        .icone-dica {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .card-dica h3 {
+            color: var(--cor-cabecalho);
+            margin-top: 0;
+            font-size: 1.4rem;
+        }
+
+        .card-dica p {
+            margin-bottom: 0;
+            font-size: 1.05rem;
+        }
+
+        /* Seção de Contatos Importantes */
+        .secao-contatos {
+            margin-top: 50px;
+            background-color: #fef2f2;
+            border: 2px solid #fecaca;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        .secao-contatos h3 {
+            color: var(--cor-ajuda);
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+
+        .lista-contatos {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0 0 0;
+        }
+
+        .lista-contatos li {
+            padding: 10px 0;
+            border-bottom: 1px solid #fee2e2;
+            font-size: 1.1rem;
+        }
+
+        .lista-contatos li:last-child {
+            border-bottom: none;
+        }
+
+        /* ==========================================================================
+           4. FOOTER (RODAPÉ)
+           ========================================================================== */
+        footer {
+            background-color: var(--cor-cabecalho); /* Mesma cor do Header */
+            color: #ffffff;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+            border-top: 4px solid var(--cor-destaque);
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 1rem;
+        }
+
+        footer a {
+            color: #ffffff;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        footer a:hover, footer a:focus {
+            color: #fde047;
+            outline: 2px solid #fde047;
+        }
+
+        /* RESPONSIVIDADE PARA CELULARES */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.7rem;
+            }
+
+            .btn-ajuda {
+                width: 100%;
+                box-sizing: border-box;
+                font-size: 1.1rem;
+            }
+
+            .barra-acessibilidade {
+                justify-content: center;
+            }
+        }
