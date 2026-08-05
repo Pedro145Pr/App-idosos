@@ -1,50 +1,137 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exemplo de Layout</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segurança Digital Simples - Guia para a Terceira Idade</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <h1>Meu Site</h1>
-    <a href="#dicas" class="btn-ajuda">Precisa de ajuda?</a>
-  </header>
+    <!-- BARRA DE ACESSIBILIDADE DE FONTE -->
+    <div class="barra-acessibilidade">
+        <span>Tamanho do texto:</span>
+        <button class="btn-fonte" onclick="mudarTamanhoFonte(1)" aria-label="Aumentar tamanho do texto">A +</button>
+        <button class="btn-fonte" onclick="mudarTamanhoFonte(-1)" aria-label="Diminuir tamanho do texto">A -</button>
+    </div>
 
-  <main>
-    <section class="espacamento">
-      <p>Conteúdo principal da página...</p>
-    </section>
+    <!-- CABEÇALHO DA PÁGINA (HEADER) -->
+    <header>
+        <div class="header-conteudo">
+            <h1>Internet Segura para a Terceira Idade</h1>
+            <p>Sua tranquilidade e proteção no mundo digital</p>
+            
+            <!-- Botão Redro que direciona para a seção de Dicas -->
+            <a href="#dicas-seguranca" class="btn-ajuda" role="button">
+                Preciso de ajuda agora!
+            </a>
+        </div>
+    </header>
 
-    <section id="dicas">
-      <h2>Dicas Úteis</h2>
-      <ul>
-        <li><strong>Dica 1:</strong> Mantenha seu código limpo e organizado.</li>
-        <li><strong>Dica 2:</strong> Use variáveis CSS para facilitar a manutenção de cores.</li>
-        <li><strong>Dica 3:</strong> Utilize <code>scroll-margin-top</code> ao navegar para IDs com menus fixos.</li>
-      </ul>
-    </section>
-  </main>
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+        
+        <!-- MENSAGEM DE BOAS-VINDAS -->
+        <section class="introducao">
+            <h2>Bem-vindo(a) ao seu guia de segurança!</h2>
+            <p>A internet é uma ótima ferramenta para conversar com a família, ver fotos e pagar contas. Queremos que você navegue com total confiança e longe de golpes.</p>
+        </section>
 
-  <footer>
-    <p>&copy; 2026 Meu Site. Todos os direitos reservados.</p>
-  </footer>
+        <!-- SEÇÃO DE DICAS DE SEGURANÇA (ÂNCORA DO BOTÃO RED) -->
+        <section id="dicas-seguranca">
+            <h2 class="secao-titulo">Dicas Importantes de Segurança</h2>
 
-  <script>
-    document.querySelector('.btn-ajuda').addEventListener('click', function(e) {
-      e.preventDefault();
-      const targetId = this.getAttribute('href');
-      const targetElement = document.querySelector(targetId);
-      
-      if (targetElement) {
-        targetElement.scrollIntoView({
-          behavior: 'smooth'
-        });
-      }
-    });
-  </script>
+            <div class="grid-dicas">
+                
+                <!-- Dica 1 -->
+                <article class="card-dica">
+                    <div>
+                        <span class="icone-dica" aria-hidden="true">💬</span>
+                        <h3>Mensagens no WhatsApp</h3>
+                        <p>Se algum parente ou amigo pedir dinheiro urgente pelo WhatsApp usando um número novo, <strong>não envie!</strong> Ligue para o número antigo da pessoa para confirmar antes de qualquer coisa.</p>
+                    </div>
+                </article>
 
+                <!-- Dica 2 -->
+                <article class="card-dica">
+                    <div>
+                        <span class="icone-dica" aria-hidden="true">🔑</span>
+                        <h3>Cuidado com Senhas</h3>
+                        <p>Nunca anote suas senhas no celular ou perto do cartão. Não use datas de aniversário fáceis. Nunca diga sua senha para ninguém pelo telefone.</p>
+                    </div>
+                </article>
+
+                <!-- Dica 3 -->
+                <article class="card-dica">
+                    <div>
+                        <span class="icone-dica" aria-hidden="true">🔗</span>
+                        <h3>Links e Sorteios</h3>
+                        <p>Recebeu uma mensagem dizendo que você ganhou um prêmio ou uma promoção? <strong>Não clique no link!</strong> Bancos e lojas sérias não mandam prêmios surpresa por mensagem.</p>
+                    </div>
+                </article>
+
+                <!-- Dica 4 -->
+                <article class="card-dica">
+                    <div>
+                        <span class="icone-dica" aria-hidden="true">🏦</span>
+                        <h3>Ligação do Banco</h3>
+                        <p>O banco <strong>nunca</strong> liga pedindo para você transferir dinheiro ou pedindo sua senha. Se receber uma ligação assim, desligue imediatamente e chame um familiar.</p>
+                    </div>
+                </article>
+
+                <!-- Dica 5 -->
+                <article class="card-dica">
+                    <div>
+                        <span class="icone-dica" aria-hidden="true">📱</span>
+                        <h3>Instalação de Aplicativos</h3>
+                        <p>Só baixe aplicativos com a ajuda de alguém de confiança ou direto da loja oficial do seu celular (Play Store ou App Store).</p>
+                    </div>
+                </article>
+
+                <!-- Dica 6 -->
+                <article class="card-dica">
+                    <div>
+                        <span class="icone-dica" aria-hidden="true">👥</span>
+                        <h3>Pede Ajuda sem Vergonha</h3>
+                        <p>Ficou na dúvida sobre uma mensagem ou ligação? Pare, respire e peça ajuda a um filho, neto ou pessoa de sua confiança antes de tomar qualquer atitude.</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- SEÇÃO DE CONTATOS DE EMERGÊNCIA -->
+        <section class="secao-contatos">
+            <h3>Está em dúvida ou acha que caiu em um golpe?</h3>
+            <p>Mantenha a calma e siga esses passos:</p>
+            <ul class="lista-contatos">
+                <li><strong>1. Ligue para o seu banco:</strong> Mande bloquear temporariamente suas contas se informou algum dado.</li>
+                <li><strong>2. Avise um familiar:</strong> Peça para alguém próximo te ajudar a verificar o que aconteceu.</li>
+                <li><strong>3. Ligue para a Polícia (190):</strong> Em caso de ameaças ou golpes financeiros graves.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ (FOOTER - MESMA COR DO HEADER) -->
+    <footer>
+        <p><strong>Guia de Segurança Digital Acessível</strong></p>
+        <p>Desenvolvido para proteger e apoiar a melhor idade na internet.</p>
+        <p>© 2026 - Conteúdo Informativo e Gratuito</p>
+    </footer>
+
+    <!-- SCRIPT SIMPLES PARA O BOTÃO DE ACESSIBILIDADE DE FONTE -->
+    <script>
+        let tamanhoAtual = 18;
+
+        function mudarTamanhoFonte(delta) {
+            tamanhoAtual += delta * 2;
+            // Limites mínimo (14px) e máximo (26px)
+            if (tamanhoAtual < 14) tamanhoAtual = 14;
+            if (tamanhoAtual > 26) tamanhoAtual = 26;
+            
+            document.documentElement.style.fontSize = tamanhoAtual + 'px';
+        }
+    </script>
 </body>
 </html>
