@@ -1,0 +1,1 @@
+let btnAjuda = document.querySelector(".botão-ajuda");
